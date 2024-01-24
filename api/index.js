@@ -31,6 +31,7 @@ app.get('/api/getData', async (req, res, next) => {
     console.log(data)
 
     // Respond with the data
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.json(data);
   } catch (error) {
     console.error(error);
